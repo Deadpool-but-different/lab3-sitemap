@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронирование тура — Байкал Тур</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #f4f6f5;
+        }
+
+        header {
+            background: #1d4545;
+            color: white;
+            padding: 20px 60px;
+        }
+
+        header h1 {
+            display: inline;
+            margin-right: 50px;
+        }
+
+        nav {
+            display: inline;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+        }
+
+        .booking {
+            width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+        }
+
+        .booking h2 {
+            text-align: center;
+        }
+
+        .tour-info {
+            background: #e5efeb;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #bbb;
+            font-size: 15px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #1d4545;
+        }
+
+        input:invalid:not(:placeholder-shown) {
+            border-color: #c0392b;
+        }
+
+        input:valid:not(:placeholder-shown) {
+            border-color: #27804a;
+        }
+
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 25px;
+            padding: 12px;
+            background: #1d4545;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background: #2c6262;
+        }
+
+        footer {
+            background: #1d4545;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Байкал Тур</h1>
+
+        <nav>
+            <a href="../index.html">Главная</a>
+            <a href="./catalog.html">Туры</a>
+            <a href="./about.html">О нас</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking">
+            <h2>Бронирование тура</h2>
+
+            <div class="tour-info" id="tour-info">
+                <p>Загрузка информации о туре...</p>
+            </div>
+
+            <form id="booking-form">
+
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Введите имя" required>
+
+                <label for="phone">Номер телефона</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+7 (900) 123-45-67"
+                    pattern="(\+7|8)[0-9\s\-\(\)]{10,18}"
+                    title="Введите российский номер телефона, например +7 (900) 123-45-67"
+                    required
+                >
+
+                <label for="email">Электронная почта</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@mail.ru"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    title="Введите корректный адрес, например example@mail.ru"
+                    required
+                >
+
+                <label for="date">Дата поездки</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="people">Количество человек</label>
+                <input type="number" id="people" name="people"
+                       min="1" max="20" value="1" required>
+
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" name="comment"
+                          placeholder="Дополнительные пожелания"></textarea>
+
+                <button type="submit" class="button">
+                    Забронировать
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Байкал Тур © 2026</p>
+        <p>Телефон: +7 (900) 123-45-67</p>
+        <p>Email: info@baikal-tour.ru</p>
+    </footer>
+
+    <script>
+        const tours = {
+            1: { name: "Покорение вершин", price: "12 000 ₽" },
+            2: { name: "Озёра Байкала", price: "9 000 ₽" },
+            3: { name: "Тропами тайги", price: "7 000 ₽" },
+            4: { name: "Горные долины", price: "18 000 ₽" },
+            5: { name: "Байкал с высоты", price: "14 000 ₽" },
+            6: { name: "Дикая природа", price: "8 000 ₽" },
+            7: { name: "Лесное путешествие", price: "4 500 ₽" },
+            8: { name: "Дорога к водопадам", price: "8 500 ₽" },
+            9: { name: "Большое путешествие", price: "25 000 ₽" },
+            10: { name: "Тихая тайга", price: "3 500 ₽" },
+            11: { name: "Горный рассвет", price: "7 500 ₽" },
+            12: { name: "Долина приключений", price: "13 000 ₽" },
+            13: { name: "Берега Байкала", price: "9 500 ₽" },
+            14: { name: "Выходные в горах", price: "10 000 ₽" },
+            15: { name: "Золотая осень", price: "15 000 ₽" }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        const tour = tours[id];
+
+        const tourInfo = document.getElementById("tour-info");
+        const form = document.getElementById("booking-form");
+        const dateInput = document.getElementById("date");
+
+        // Запрещаем выбирать прошедшие даты
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, "0");
+        const day = String(today.getDate()).padStart(2, "0");
+
+        dateInput.min = `${year}-${month}-${day}`;
+
+        if (tour) {
+            tourInfo.innerHTML = `
+                <h3>${tour.name}</h3>
+                <p>Стоимость на одного человека: <b>${tour.price}</b></p>
+            `;
+        } else {
+            tourInfo.innerHTML = `
+                <p>Тур не найден. Вернитесь в каталог и выберите тур.</p>
+            `;
+
+            form.querySelector("button").disabled = true;
+        }
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!tour) {
+                return;
+            }
+
+            alert("Бронирование тура «" + tour.name + "» оформлено успешно!");
+
+            window.location.href = "../index.html";
+        });
+    </script>
+
+</body>
+</html>

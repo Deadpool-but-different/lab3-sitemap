@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Байкал Тур — путешествия по горам</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #f4f6f5;
+        }
+
+        header {
+            background: #1d4545;
+            color: white;
+            padding: 20px 60px;
+        }
+
+        header h1 {
+            display: inline;
+            margin-right: 50px;
+        }
+
+        nav {
+            display: inline;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+        }
+
+        .banner {
+            background: #c8ded7;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .banner h2 {
+            font-size: 36px;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #1d4545;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .tours {
+            padding: 40px 60px;
+            text-align: center;
+        }
+
+        .tour-card {
+            display: inline-block;
+            width: 280px;
+            margin: 15px;
+            padding-bottom: 20px;
+            background: white;
+            vertical-align: top;
+        }
+
+        .tour-card img {
+            width: 280px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .tour-card p {
+            padding: 0 15px;
+        }
+
+        footer {
+            background: #1d4545;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Байкал Тур</h1>
+
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="./pages/catalog.html">Туры</a>
+            <a href="./pages/about.html">О нас</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h2>Открой для себя горный Байкал</h2>
+            <p>Незабываемые путешествия, горные маршруты и красота природы.</p>
+            <a href="./pages/catalog.html" class="button">Выбрать тур</a>
+        </section>
+
+        <section class="tours" id="tours">
+            <h2>Популярные маршруты</h2>
+
+            <div class="tour-card">
+                <img src="./img/pic1.jpg" alt="Горный пейзаж">
+                <h3>Горные вершины</h3>
+                <p>Путешествие по живописным горным тропам с опытным гидом.</p>
+                <p><b>От 8 000 ₽</b></p>
+                <a href="./pages/tour.html?id=1" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="./img/pic2.jpg" alt="Озеро среди гор">
+                <h3>Озёра Байкала</h3>
+                <p>Удивительные пейзажи, чистая вода и отдых на природе.</p>
+                <p><b>От 12 000 ₽</b></p>
+                <a href="./pages/tour.html?id=2" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="./img/pic3.jpg" alt="Лесная горная тропа">
+                <h3>Лесные тропы</h3>
+                <p>Несложные пешие маршруты для любителей спокойного отдыха.</p>
+                <p><b>От 6 000 ₽</b></p>
+                <a href="./pages/tour.html?id=3" class="button">Подробнее</a>
+            </div>
+        </section>
+
+        <section class="tours" id="about">
+            <h2>О нашем турагентстве</h2>
+            <p>
+                Мы организуем путешествия по горному Байкалу,
+                помогаем выбирать маршруты и знакомим туристов
+                с красотой сибирской природы.
+            </p>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Байкал Тур © 2026</p>
+        <p>Телефон: +7 (900) 123-45-67</p>
+        <p>Email: info@baikal-tour.ru</p>
+    </footer>
+
+</body>
+</html>

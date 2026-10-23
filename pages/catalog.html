@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог туров — Байкал Тур</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #f4f6f5;
+        }
+
+        header {
+            background: #1d4545;
+            color: white;
+            padding: 20px 60px;
+        }
+
+        header h1 {
+            display: inline;
+            margin-right: 50px;
+        }
+
+        nav {
+            display: inline;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+        }
+
+        .intro {
+            background: #c8ded7;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .catalog {
+            padding: 30px 50px;
+            text-align: center;
+        }
+
+        .tour-card {
+            display: inline-block;
+            width: 280px;
+            margin: 15px;
+            padding-bottom: 20px;
+            background: white;
+            vertical-align: top;
+        }
+
+        .tour-card img {
+            width: 280px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .tour-card p {
+            padding: 0 15px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #1d4545;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #1d4545;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Байкал Тур</h1>
+
+        <nav>
+            <a href="../index.html">Главная</a>
+            <a href="./catalog.html">Туры</a>
+            <a href="./about.html">О нас</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Каталог туров</h2>
+            <p>Выбери своё следующее путешествие по горному Байкалу.</p>
+        </section>
+
+        <section class="catalog">
+
+            <div class="tour-card">
+                <img src="../img/pic1.jpg"
+                     alt="Горные вершины">
+                <h3>Покорение вершин</h3>
+                <p>Пеший маршрут по горным тропам с красивыми панорамами.</p>
+                <p><b>3 дня</b></p>
+                <p><b>От 12 000 ₽</b></p>
+                <a href="./tour.html?id=1" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic2.jpg"
+                     alt="Озеро среди гор">
+                <h3>Озёра Байкала</h3>
+                <p>Знакомство с живописными озёрами и береговыми пейзажами.</p>
+                <p><b>2 дня</b></p>
+                <p><b>От 9 000 ₽</b></p>
+                <a href="./tour.html?id=2" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic3.jpg"
+                     alt="Лесная тропа">
+                <h3>Тропами тайги</h3>
+                <p>Прогулка по лесам, горным тропам и местам отдыха на природе.</p>
+                <p><b>2 дня</b></p>
+                <p><b>От 7 000 ₽</b></p>
+                <a href="./tour.html?id=3" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic4.jpg"
+                     alt="Горная долина">
+                <h3>Горные долины</h3>
+                <p>Путешествие по долинам с остановками для фотографий.</p>
+                <p><b>4 дня</b></p>
+                <p><b>От 18 000 ₽</b></p>
+                <a href="./tour.html?id=4" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic5.jpg"
+                     alt="Горное озеро">
+                <h3>Байкал с высоты</h3>
+                <p>Маршрут к смотровым площадкам с видами на окрестности.</p>
+                <p><b>3 дня</b></p>
+                <p><b>От 14 000 ₽</b></p>
+                <a href="./tour.html?id=5" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic6.jpg"
+                     alt="Дикая природа">
+                <h3>Дикая природа</h3>
+                <p>Наблюдение за природой и знакомство с местными ландшафтами.</p>
+                <p><b>2 дня</b></p>
+                <p><b>От 8 000 ₽</b></p>
+                <a href="./tour.html?id=6" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic7.jpg"
+                     alt="Хвойный лес">
+                <h3>Лесное путешествие</h3>
+                <p>Спокойный поход по хвойным лесам и природным тропам.</p>
+                <p><b>1 день</b></p>
+                <p><b>От 4 500 ₽</b></p>
+                <a href="./tour.html?id=7" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic8.jpg"
+                     alt="Горный водопад">
+                <h3>Дорога к водопадам</h3>
+                <p>Поход к природным водопадам среди гор и лесов.</p>
+                <p><b>2 дня</b></p>
+                <p><b>От 8 500 ₽</b></p>
+                <a href="./tour.html?id=8" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic9.jpg"
+                     alt="Пейзаж для путешествия">
+                <h3>Большое путешествие</h3>
+                <p>Несколько дней вдали от города с насыщенной программой.</p>
+                <p><b>5 дней</b></p>
+                <p><b>От 25 000 ₽</b></p>
+                <a href="./tour.html?id=9" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic10.jpg"
+                     alt="Солнечный лес">
+                <h3>Тихая тайга</h3>
+                <p>Небольшой поход для тех, кто хочет отдохнуть на природе.</p>
+                <p><b>1 день</b></p>
+                <p><b>От 3 500 ₽</b></p>
+                <a href="./tour.html?id=10" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic11.jpg"
+                     alt="Горы и солнечный свет">
+                <h3>Горный рассвет</h3>
+                <p>Ранний выход на маршрут ради рассвета над горами.</p>
+                <p><b>2 дня</b></p>
+                <p><b>От 7 500 ₽</b></p>
+                <a href="./tour.html?id=11" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic12.jpg"
+                     alt="Пустынный природный пейзаж">
+                <h3>Долина приключений</h3>
+                <p>Исследование необычных ландшафтов и природных маршрутов.</p>
+                <p><b>3 дня</b></p>
+                <p><b>От 13 000 ₽</b></p>
+                <a href="./tour.html?id=12" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic13.jpg"
+                     alt="Вода и берег">
+                <h3>Берега Байкала</h3>
+                <p>Прогулки вдоль воды, отдых и знакомство с побережьем.</p>
+                <p><b>2 дня</b></p>
+                <p><b>От 9 500 ₽</b></p>
+                <a href="./tour.html?id=13" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic14.jpg"
+                     alt="Путешествие по природным местам">
+                <h3>Выходные в горах</h3>
+                <p>Короткий тур для перезагрузки и отдыха от городской суеты.</p>
+                <p><b>2 дня</b></p>
+                <p><b>От 10 000 ₽</b></p>
+                <a href="./tour.html?id=14" class="button">Подробнее</a>
+            </div>
+
+            <div class="tour-card">
+                <img src="../img/pic15.jpg"
+                     alt="Рассвет над природой">
+                <h3>Золотая осень</h3>
+                <p>Сезонный маршрут по лесам и горам с осенними пейзажами.</p>
+                <p><b>3 дня</b></p>
+                <p><b>От 15 000 ₽</b></p>
+                <a href="./tour.html?id=15" class="button">Подробнее</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Байкал Тур © 2026</p>
+        <p>Телефон: +7 (900) 123-45-67</p>
+        <p>Email: info@baikal-tour.ru</p>
+    </footer>
+
+</body>
+</html>
